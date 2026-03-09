@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rafa Vieira × ON Running</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#0a0a0a;--white:#fff;--gray:#f4f4f4;--mid:#888;--accent:#C8FF00}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:22px 60px;background:rgba(255,255,255,0.93);backdrop-filter:blur(12px);border-bottom:1px solid #eee}
+.nav-logo{font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+.nav-right{font-size:11px;color:var(--mid);letter-spacing:2px;text-transform:uppercase}
+.hero{min-height:100vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 60px 80px;position:relative;overflow:hidden}
+.hero-tag{position:absolute;top:110px;left:60px;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#444}
+.hero-date{position:absolute;top:110px;right:60px;font-size:10px;letter-spacing:2px;color:#444}
+.hero h1{font-size:clamp(56px,9vw,120px);font-weight:900;color:#fff;line-height:.93;letter-spacing:-3px;margin-bottom:44px}
+.hero h1 .hl{color:var(--accent)}
+.hero-bottom{display:flex;justify-content:space-between;align-items:flex-end}
+.hero-sub{font-size:15px;color:#666;font-weight:300;max-width:320px;line-height:1.7}
+.hero-stats{display:flex;gap:48px}
+.hs .num{display:block;font-size:30px;font-weight:900;color:#fff;letter-spacing:-1px}
+.hs .lbl{font-size:10px;color:#444;letter-spacing:2px;text-transform:uppercase}
+.hs{text-align:right}
+section{padding:120px 60px}
+.sec-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--mid);margin-bottom:56px;display:flex;align-items:center;gap:16px}
+.sec-label::after{content:'';flex:1;max-width:50px;height:1px;background:#ddd}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.about-grid h2{font-size:clamp(34px,3.5vw,52px);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:28px}
+.about-grid p{font-size:15px;line-height:1.85;color:#555;font-weight:300}
+.stats-box{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#e8e8e8;border:2px solid #e8e8e8}
+.sb{background:#fff;padding:36px 28px}
+.sb.dk{background:var(--black);color:#fff}
+.sb .big{font-size:40px;font-weight:900;letter-spacing:-2px;line-height:1;margin-bottom:8px}
+.sb .desc{font-size:10px;color:var(--mid);letter-spacing:1px;text-transform:uppercase}
+.sb.dk .desc{color:#444}
+/* PROJECT */
+.project{background:var(--black);color:#fff}
+.project .sec-label{color:#333}
+.project .sec-label::after{background:#222}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.project h2{font-size:clamp(44px,5.5vw,80px);font-weight:900;line-height:.95;letter-spacing:-3px;margin-bottom:28px}
+.project h2 em{font-style:normal;color:var(--accent)}
+.project p{font-size:15px;color:#666;line-height:1.8;font-weight:300;margin-bottom:40px}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid #222;padding:11px 22px;border-radius:100px;font-size:12px;color:#666;letter-spacing:1px}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.proj-box{border:1px solid #1a1a1a;padding:52px}
+.pd{padding:24px 0;border-bottom:1px solid #1a1a1a;display:flex;justify-content:space-between;align-items:baseline}
+.pd:last-child{border-bottom:none}
+.pd .k{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#444}
+.pd .v{font-size:15px;font-weight:600}
+/* DELIVERABLES */
+.deliverables{background:var(--gray)}
+.deliverables h2{font-size:clamp(34px,4vw,54px);font-weight:900;letter-spacing:-2px;margin-bottom:72px;max-width:560px;line-height:1.05}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:#ddd;border:2px solid #ddd;margin-bottom:0}
+.card{background:#fff;padding:44px 28px}
+.card-n{font-size:10px;letter-spacing:3px;color:#ccc;margin-bottom:28px}
+.card-i{font-size:26px;margin-bottom:18px}
+.card h3{font-size:17px;font-weight:700;margin-bottom:10px;letter-spacing:-.5px}
+.card p{font-size:12px;color:#888;line-height:1.7}
+.card .qty{margin-top:24px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid);border-top:1px solid #eee;padding-top:18px}
+.total{background:var(--black);color:#fff;padding:36px 44px;display:flex;justify-content:space-between;align-items:center}
+.total .tl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#444}
+.total .tv{font-size:30px;font-weight:900;letter-spacing:-1px}
+/* NEEDS */
+.needs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#e8e8e8;border:2px solid #e8e8e8}
+.nb{background:#fff;padding:56px 44px}
+.nb.dk{background:var(--black);color:#fff}
+.nb-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--mid);margin-bottom:28px}
+.nb.dk .nb-tag{color:#333}
+.nb h3{font-size:26px;font-weight:800;letter-spacing:-1px;margin-bottom:22px}
+.nl{list-style:none}
+.nl li{padding:13px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;display:flex;align-items:center;gap:12px}
+.nb.dk .nl li{color:#777;border-bottom-color:#1a1a1a}
+.nl li::before{content:'→';color:var(--accent);font-size:13px}
+/* WHY */
+.why{background:var(--accent);color:var(--black)}
+.why .sec-label{color:rgba(0,0,0,.35)}
+.why .sec-label::after{background:rgba(0,0,0,.15)}
+.why h2{font-size:clamp(40px,5vw,70px);font-weight:900;letter-spacing:-2px;line-height:1.0;max-width:680px;margin-bottom:48px}
+.why p{font-size:17px;line-height:1.85;max-width:600px;opacity:.75}
+/* CLOSING */
+.closing{background:var(--black);color:#fff;min-height:55vh;display:flex;flex-direction:column;justify-content:center}
+.closing h2{font-size:clamp(48px,7vw,96px);font-weight:900;letter-spacing:-3px;line-height:.95;margin-bottom:52px}
+.closing h2 em{font-style:normal;color:var(--accent)}
+.c-meta{display:flex;gap:48px;align-items:center;flex-wrap:wrap}
+.c-meta a{font-size:13px;color:#555;text-decoration:none;letter-spacing:1px;transition:color .2s}
+.c-meta a:hover{color:#fff}
+.c-meta .sep{color:#222}
+.foot{margin-top:80px;padding-top:36px;border-top:1px solid #151515;display:flex;justify-content:space-between}
+.foot span{font-size:10px;color:#2a2a2a;letter-spacing:2px;text-transform:uppercase}
+@media(max-width:768px){
+  nav{padding:18px 24px}
+  section{padding:80px 24px}
+  .hero{padding:0 24px 60px}
+  .hero-tag{left:24px}
+  .hero-date{right:24px}
+  .about-grid,.proj-grid,.needs-grid{grid-template-columns:1fr;gap:40px}
+  .cards{grid-template-columns:1fr 1fr}
+  .hero-bottom{flex-direction:column;align-items:flex-start;gap:28px}
+  .hero-stats{gap:28px}
+  .hs{text-align:left}
+  .total{flex-direction:column;align-items:flex-start;gap:10px}
+  .foot{flex-direction:column;gap:12px}
+}
+@media(max-width:480px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Rafa Vieira</div>
+  <div class="nav-right">Propuesta × ON Running</div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Propuesta de Alianza — 2026</div>
+  <div class="hero-date">Marzo → Junio 2026</div>
+  <h1>Rafa<br>Vieira<br><span class="hl">× ON.</span></h1>
+  <div class="hero-bottom">
+    <p class="hero-sub">Una atleta en proceso. Una comunidad real. Un proyecto que vale la pena acompañar.</p>
+    <div class="hero-stats">
+      <div class="hs"><span class="num">3,3M</span><span class="lbl">Views / mes</span></div>
+      <div class="hs"><span class="num">37K</span><span class="lbl">Seguidores</span></div>
+      <div class="hs"><span class="num">76%</span><span class="lbl">Mujeres</span></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="sec-label">01 — Quién soy</div>
+  <div class="about-grid">
+    <div>
+      <h2>Coach, creadora de contenido y atleta en proceso.</h2>
+      <p>Soy Rafa Vieira. Comparto mi vida con propósito y autenticidad para una comunidad de mujeres de 25 a 44 años que quieren vivir con más intención, bienestar y goce.<br><br>Desde enero 2026 entreno para Hyrox — y lo documento todo. Mi audiencia no sigue a una influencer de deporte. Sigue a alguien que se anima a hacer algo difícil y lo muestra de verdad.</p>
+    </div>
+    <div class="stats-box">
+      <div class="sb"><div class="big">3,3M</div><div class="desc">Visualizaciones / 30 días</div></div>
+      <div class="sb dk"><div class="big">531K</div><div class="desc">Cuentas alcanzadas</div></div>
+      <div class="sb dk"><div class="big">40K</div><div class="desc">Interacciones</div></div>
+      <div class="sb"><div class="big">+9,4%</div><div class="desc">Crecimiento mensual</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="project">
+  <div class="sec-label">02 — El proyecto</div>
+  <div class="proj-grid">
+    <div>
+      <h2>Hyrox<br><em>Buenos Aires.</em></h2>
+      <p>El 13 de junio de 2026 compito en una de las carreras de fitness funcional más exigentes del mundo. 8 km de carrera + 8 estaciones de trabajo. Llevo meses entrenando y documentando cada parte del proceso.</p>
+      <span class="pill"><span class="dot"></span>Actualmente en preparación</span>
+    </div>
+    <div class="proj-box">
+      <div class="pd"><span class="k">Evento</span><span class="v">Hyrox Buenos Aires</span></div>
+      <div class="pd"><span class="k">Fecha</span><span class="v">13 de junio, 2026</span></div>
+      <div class="pd"><span class="k">Duración alianza</span><span class="v">4 meses (mar → jun)</span></div>
+      <div class="pd"><span class="k">Entrenando desde</span><span class="v">Enero 2026</span></div>
+      <div class="pd"><span class="k">Audiencia principal</span><span class="v">Mujeres 25–44, Santiago</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="deliverables">
+  <div class="sec-label">03 — Entregas</div>
+  <h2>25+ piezas de contenido en 4 meses.</h2>
+  <div class="cards">
+    <div class="card"><div class="card-n">01</div><div class="card-i">🎬</div><h3>Reels entrenamiento</h3><p>Proceso real de preparación para Hyrox. Sin sobreproducción. ON en mi rutina de forma auténtica.</p><div class="qty">4 reels × mes × 4 meses</div></div>
+    <div class="card"><div class="card-n">02</div><div class="card-i">📱</div><h3>Historias diarias</h3><p>Presencia constante en stories. Entrenamiento, recuperación, alimentación. ON en mi vida real.</p><div class="qty">Presencia diaria continua</div></div>
+    <div class="card"><div class="card-n">03</div><div class="card-i">🧘</div><h3>Hábitos y recuperación</h3><p>Movilidad, rutinas de bienestar. Muy alineado con el estilo de vida que ON comunica.</p><div class="qty">2 reels × mes × 4 meses</div></div>
+    <div class="card"><div class="card-n">04</div><div class="card-i">🏁</div><h3>Reel competencia</h3><p>Documentación completa del día Hyrox en Buenos Aires. Alto impacto emocional. Una historia real.</p><div class="qty">1 reel especial — 13 jun</div></div>
+  </div>
+  <div class="total"><span class="tl">Total piezas de contenido</span><span class="tv">25+ piezas en 4 meses</span></div>
+</section>
+
+<section class="needs">
+  <div class="sec-label">04 — Lo que necesito</div>
+  <h2 style="font-size:clamp(34px,4vw,54px);font-weight:900;letter-spacing:-2px;margin-bottom:72px;line-height:1.05">Una alianza que crezca con el proyecto.</h2>
+  <div class="needs-grid">
+    <div class="nb">
+      <div class="nb-tag">Canje mensual</div>
+      <h3>Producto ON cada mes</h3>
+      <ul class="nl">
+        <li>1 par de zapatillas de running o training</li>
+        <li>Ropa deportiva (calzas, top, polera)</li>
+        <li>Accesorios opcionales</li>
+      </ul>
+    </div>
+    <div class="nb dk">
+      <div class="nb-tag">Apoyo al proyecto</div>
+      <h3>Hyrox Buenos Aires</h3>
+      <ul class="nl">
+        <li>Pago inscripción (~USD 200)</li>
+        <li>Aporte al viaje (pasaje + hospedaje)</li>
+        <li>Escalable según resultados del contenido</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="sec-label">05 — ¿Por qué ON?</div>
+  <h2>No es una propuesta masiva. Es específica para ON.</h2>
+  <p>Ya uso sus zapatillas. Fui a sus eventos. Hay una relación real. El contenido que produciría no sería publicidad — sería mi vida con ON puesto.<br><br>Mi audiencia confía en lo que muestro porque saben que solo comparto lo que genuinamente uso. Eso no tiene precio en términos de credibilidad de marca.</p>
+</section>
+
+<section class="closing">
+  <div class="sec-label" style="color:#222">06 — Hablemos</div>
+  <h2>Me encantaría<br>hacer esto <em>juntas.</em></h2>
+  <div class="c-meta">
+    <a href="https://instagram.com/__rafavieira__">@__rafavieira__</a>
+    <span class="sep">·</span>
+    <a href="https://rafiki.cl">rafiki.cl</a>
+    <span class="sep">·</span>
+    <a href="mailto:">Escríbeme</a>
+  </div>
+  <div class="foot">
+    <span>Rafa Vieira × ON Running — Propuesta 2026</span>
+    <span>Alianza Marzo → Junio 2026</span>
+  </div>
+</section>
+
+</body>
+</html>
