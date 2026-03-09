@@ -19,7 +19,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .hero h1{font-size:clamp(56px,9vw,120px);font-weight:900;color:#fff;line-height:.93;letter-spacing:-3px;margin-bottom:44px}
 .hero h1 .hl{color:var(--accent)}
 .hero-bottom{display:flex;justify-content:space-between;align-items:flex-end}
-.hero-sub{font-size:15px;color:#666;font-weight:300;max-width:320px;line-height:1.7}
+.hero-sub{font-size:15px;color:#aaa;font-weight:300;max-width:320px;line-height:1.7}
 .hero-stats{display:flex;gap:48px}
 .hs .num{display:block;font-size:30px;font-weight:900;color:#fff;letter-spacing:-1px}
 .hs .lbl{font-size:10px;color:#444;letter-spacing:2px;text-transform:uppercase}
@@ -27,7 +27,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 section{padding:120px 60px}
 .sec-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--mid);margin-bottom:56px;display:flex;align-items:center;gap:16px}
 .sec-label::after{content:'';flex:1;max-width:50px;height:1px;background:#ddd}
-/* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 .about-grid h2{font-size:clamp(34px,3.5vw,52px);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:28px}
 .about-grid p{font-size:15px;line-height:1.85;color:#555;font-weight:300}
@@ -37,14 +36,13 @@ section{padding:120px 60px}
 .sb .big{font-size:40px;font-weight:900;letter-spacing:-2px;line-height:1;margin-bottom:8px}
 .sb .desc{font-size:10px;color:var(--mid);letter-spacing:1px;text-transform:uppercase}
 .sb.dk .desc{color:#444}
-/* PROJECT */
 .project{background:var(--black);color:#fff}
 .project .sec-label{color:#333}
 .project .sec-label::after{background:#222}
 .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .project h2{font-size:clamp(44px,5.5vw,80px);font-weight:900;line-height:.95;letter-spacing:-3px;margin-bottom:28px}
 .project h2 em{font-style:normal;color:var(--accent)}
-.project p{font-size:15px;color:#666;line-height:1.8;font-weight:300;margin-bottom:40px}
+.project p{font-size:15px;color:#aaa;line-height:1.8;font-weight:300;margin-bottom:40px}
 .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid #222;padding:11px 22px;border-radius:100px;font-size:12px;color:#666;letter-spacing:1px}
 .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
 .proj-box{border:1px solid #1a1a1a;padding:52px}
@@ -52,7 +50,6 @@ section{padding:120px 60px}
 .pd:last-child{border-bottom:none}
 .pd .k{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#444}
 .pd .v{font-size:15px;font-weight:600}
-/* DELIVERABLES */
 .deliverables{background:var(--gray)}
 .deliverables h2{font-size:clamp(34px,4vw,54px);font-weight:900;letter-spacing:-2px;margin-bottom:72px;max-width:560px;line-height:1.05}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:#ddd;border:2px solid #ddd;margin-bottom:0}
@@ -65,7 +62,6 @@ section{padding:120px 60px}
 .total{background:var(--black);color:#fff;padding:36px 44px;display:flex;justify-content:space-between;align-items:center}
 .total .tl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#444}
 .total .tv{font-size:30px;font-weight:900;letter-spacing:-1px}
-/* NEEDS */
 .needs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#e8e8e8;border:2px solid #e8e8e8}
 .nb{background:#fff;padding:56px 44px}
 .nb.dk{background:var(--black);color:#fff}
@@ -76,13 +72,11 @@ section{padding:120px 60px}
 .nl li{padding:13px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;display:flex;align-items:center;gap:12px}
 .nb.dk .nl li{color:#777;border-bottom-color:#1a1a1a}
 .nl li::before{content:'→';color:var(--accent);font-size:13px}
-/* WHY */
 .why{background:var(--accent);color:var(--black)}
 .why .sec-label{color:rgba(0,0,0,.35)}
 .why .sec-label::after{background:rgba(0,0,0,.15)}
 .why h2{font-size:clamp(40px,5vw,70px);font-weight:900;letter-spacing:-2px;line-height:1.0;max-width:680px;margin-bottom:48px}
 .why p{font-size:17px;line-height:1.85;max-width:600px;opacity:.75}
-/* CLOSING */
 .closing{background:var(--black);color:#fff;min-height:55vh;display:flex;flex-direction:column;justify-content:center}
 .closing h2{font-size:clamp(48px,7vw,96px);font-weight:900;letter-spacing:-3px;line-height:.95;margin-bottom:52px}
 .closing h2 em{font-style:normal;color:var(--accent)}
@@ -135,7 +129,7 @@ section{padding:120px 60px}
   <div class="about-grid">
     <div>
       <h2>Coach, creadora de contenido y atleta en proceso.</h2>
-      <p>Soy Rafa Vieira. Comparto mi vida con propósito y autenticidad para una comunidad de mujeres de 25 a 44 años que quieren vivir con más intención, bienestar y goce.<br><br>Desde enero 2026 entreno para Hyrox — y lo documento todo. Mi audiencia no sigue a una influencer de deporte. Sigue a alguien que se anima a hacer algo difícil y lo muestra de verdad.</p>
+      <p>Soy Rafa Vieira. Comparto mi vida con propósito y autenticidad para una comunidad de mujeres de 25 a 44 años que quieren vivir con más intención, bienestar y goce.<br><br>Desde enero 2026 entreno en Kifit y quiero empezar a documentar mi proceso para prepararme para Hyrox Buenos Aires en junio 2026. Voy a documentar mi alimentación — que la llevo con una nutricionista — mis entrenamientos y mis días de running. Quiero que ON sea parte de la experiencia impulsando el proceso.</p>
     </div>
     <div class="stats-box">
       <div class="sb"><div class="big">3,3M</div><div class="desc">Visualizaciones / 30 días</div></div>
@@ -151,7 +145,7 @@ section{padding:120px 60px}
   <div class="proj-grid">
     <div>
       <h2>Hyrox<br><em>Buenos Aires.</em></h2>
-      <p>El 13 de junio de 2026 compito en una de las carreras de fitness funcional más exigentes del mundo. 8 km de carrera + 8 estaciones de trabajo. Llevo meses entrenando y documentando cada parte del proceso.</p>
+      <p>El 13 de junio de 2026 compito en Hyrox Buenos Aires. Entreno en Kifit, llevo mi alimentación con nutricionista y corro regularmente. Quiero documentar todo el proceso y que ON sea parte de cada etapa.</p>
       <span class="pill"><span class="dot"></span>Actualmente en preparación</span>
     </div>
     <div class="proj-box">
@@ -166,14 +160,14 @@ section{padding:120px 60px}
 
 <section class="deliverables">
   <div class="sec-label">03 — Entregas</div>
-  <h2>25+ piezas de contenido en 4 meses.</h2>
+  <h2>Contenido auténtico durante 4 meses.</h2>
   <div class="cards">
     <div class="card"><div class="card-n">01</div><div class="card-i">🎬</div><h3>Reels entrenamiento</h3><p>Proceso real de preparación para Hyrox. Sin sobreproducción. ON en mi rutina de forma auténtica.</p><div class="qty">4 reels × mes × 4 meses</div></div>
-    <div class="card"><div class="card-n">02</div><div class="card-i">📱</div><h3>Historias diarias</h3><p>Presencia constante en stories. Entrenamiento, recuperación, alimentación. ON en mi vida real.</p><div class="qty">Presencia diaria continua</div></div>
-    <div class="card"><div class="card-n">03</div><div class="card-i">🧘</div><h3>Hábitos y recuperación</h3><p>Movilidad, rutinas de bienestar. Muy alineado con el estilo de vida que ON comunica.</p><div class="qty">2 reels × mes × 4 meses</div></div>
+    <div class="card"><div class="card-n">02</div><div class="card-i">📱</div><h3>Stories semanales</h3><p>2 stories por semana mostrando entrenamiento, alimentación y running. ON presente en mi vida diaria.</p><div class="qty">2 stories × semana</div></div>
+    <div class="card"><div class="card-n">03</div><div class="card-i">🧘</div><h3>Hábitos y recuperación</h3><p>Movilidad, rutinas de bienestar, proceso con nutricionista. Alineado con el estilo de vida ON.</p><div class="qty">1 reel × mes × 4 meses</div></div>
     <div class="card"><div class="card-n">04</div><div class="card-i">🏁</div><h3>Reel competencia</h3><p>Documentación completa del día Hyrox en Buenos Aires. Alto impacto emocional. Una historia real.</p><div class="qty">1 reel especial — 13 jun</div></div>
   </div>
-  <div class="total"><span class="tl">Total piezas de contenido</span><span class="tv">25+ piezas en 4 meses</span></div>
+  <div class="total"><span class="tl">Total piezas de contenido</span><span class="tv">20+ piezas en 4 meses</span></div>
 </section>
 
 <section class="needs">
@@ -184,9 +178,9 @@ section{padding:120px 60px}
       <div class="nb-tag">Canje mensual</div>
       <h3>Producto ON cada mes</h3>
       <ul class="nl">
-        <li>1 par de zapatillas de running o training</li>
-        <li>Ropa deportiva (calzas, top, polera)</li>
-        <li>Accesorios opcionales</li>
+        <li>Zapatillas y ropa deportiva</li>
+        <li>Monto mensual: $1.300.000 CLP</li>
+        <li>Marzo a junio 2026</li>
       </ul>
     </div>
     <div class="nb dk">
@@ -194,7 +188,7 @@ section{padding:120px 60px}
       <h3>Hyrox Buenos Aires</h3>
       <ul class="nl">
         <li>Pago inscripción (~USD 200)</li>
-        <li>Aporte al viaje (pasaje + hospedaje)</li>
+        <li>Viaje (pasaje + hospedaje)</li>
         <li>Escalable según resultados del contenido</li>
       </ul>
     </div>
@@ -204,7 +198,7 @@ section{padding:120px 60px}
 <section class="why">
   <div class="sec-label">05 — ¿Por qué ON?</div>
   <h2>No es una propuesta masiva. Es específica para ON.</h2>
-  <p>Ya uso sus zapatillas. Fui a sus eventos. Hay una relación real. El contenido que produciría no sería publicidad — sería mi vida con ON puesto.<br><br>Mi audiencia confía en lo que muestro porque saben que solo comparto lo que genuinamente uso. Eso no tiene precio en términos de credibilidad de marca.</p>
+  <p>El contenido que produciría no sería publicidad — sería mi vida con ON puesto.<br><br>Mi audiencia confía en lo que muestro porque saben que solo comparto lo que genuinamente uso. Eso no tiene precio en términos de credibilidad de marca.</p>
 </section>
 
 <section class="closing">
@@ -212,8 +206,6 @@ section{padding:120px 60px}
   <h2>Me encantaría<br>hacer esto <em>juntas.</em></h2>
   <div class="c-meta">
     <a href="https://instagram.com/__rafavieira__">@__rafavieira__</a>
-    <span class="sep">·</span>
-    <a href="https://rafiki.cl">rafiki.cl</a>
     <span class="sep">·</span>
     <a href="mailto:">Escríbeme</a>
   </div>
