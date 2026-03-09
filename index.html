@@ -100,97 +100,111 @@ section { min-height: 100vh; padding: 140px 60px 100px; position: relative; over
 .pd .k { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#444; }
 .pd .v { font-size:14px; font-weight:600; }
 
-/* REELS */
-#reels { background: #0d0d0d; }
-#reels h2 { font-size:clamp(36px,4vw,56px); font-weight:900; letter-spacing:-2px; margin-bottom:16px; opacity:0; transform:translateY(40px); }
-#reels .sub { font-size:14px; color:#555; margin-bottom:72px; opacity:0; }
-.phones-row { display:flex; gap:40px; justify-content:center; flex-wrap:wrap; }
-.phone {
-  width: 240px; flex-shrink:0; background:#1a1a1a; border-radius:40px;
-  border:2px solid #2a2a2a; padding:14px;
-  box-shadow:0 40px 80px rgba(0,0,0,.6);
-  opacity:0; transform:translateY(80px);
-  transition:transform .3s ease, border-color .3s ease;
-}
-.phone:hover { transform:translateY(-10px); border-color:var(--accent); }
-.phone__notch { width:60px; height:20px; background:#0d0d0d; border-radius:0 0 14px 14px; margin:0 auto 8px; }
-.phone__screen { border-radius:28px; overflow:hidden; background:#111; aspect-ratio:9/16; display:flex; align-items:center; justify-content:center; }
-.reel-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(160deg,#1a1a1a 0%,#0d0d0d 100%); gap:12px; padding:24px; text-align:center; }
-.reel-icon { font-size:36px; }
-.reel-views { font-size:26px; font-weight:900; color:var(--accent); letter-spacing:-1px; }
-.reel-label { font-size:10px; color:#333; letter-spacing:2px; text-transform:uppercase; }
-.reel-title { font-size:12px; color:#555; line-height:1.5; margin-top:4px; }
-.phone__label { text-align:center; margin-top:14px; font-size:10px; color:#333; letter-spacing:2px; text-transform:uppercase; }
+<!-- REELS -->
+<section id="reels">
+  <div class="sec-label">03 — Contenido publicado</div>
+  <h2>Reels de deporte y running.</h2>
+  <p class="sub">Contenido real ya publicado — así se ve mi vida activa.</p>
+  <div class="reels-row">
 
-/* DELIVERABLES */
-#deliverables { background: var(--gray); color: var(--black); }
-#deliverables h2 { font-size:clamp(36px,4vw,56px); font-weight:900; letter-spacing:-2px; margin-bottom:72px; opacity:0; transform:translateY(40px); }
-.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:#d5d5d5; border:2px solid #d5d5d5; }
-.card { background:var(--white); padding:48px 32px; opacity:0; transform:translateY(40px); transition:transform .3s ease, border-color .3s ease; border:2px solid transparent; }
-.card:hover { transform:translateY(-6px); border-color:var(--black); }
-.card-n { font-size:10px; letter-spacing:3px; color:#ccc; margin-bottom:28px; }
-.card-i { font-size:28px; margin-bottom:20px; }
-.card h3 { font-size:17px; font-weight:800; margin-bottom:12px; letter-spacing:-.5px; }
-.card p { font-size:12px; color:#888; line-height:1.75; }
-.card .qty { margin-top:28px; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--mid); border-top:1px solid #eee; padding-top:20px; font-weight:600; }
-.total-bar { background:var(--black); color:var(--white); padding:40px 48px; display:flex; justify-content:space-between; align-items:center; }
-.total-bar .tl { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:#444; }
-.total-bar .tv { font-size:36px; font-weight:900; letter-spacing:-1px; color:var(--accent); }
+    <div class="reel-card">
+      <div class="reel-thumb reel-thumb--1">
+        <div class="reel-thumb-tag">Hyrox · Kifit</div>
+        <div class="reel-thumb-icon">💪</div>
+      </div>
+      <div class="reel-body">
+        <div class="reel-body-top">
+          <span class="reel-date">4 de marzo, 2026</span>
+          <a href="https://www.instagram.com/reel/DVe57dBCXVk/" target="_blank" class="reel-link">↗</a>
+        </div>
+        <h3 class="reel-title-card">Entrenamiento HYROX</h3>
+        <div class="reel-views-row">
+          <span class="reel-big-num" data-target="11343">0</span>
+          <span class="reel-views-label">views</span>
+        </div>
+        <div class="reel-metrics">
+          <div class="rm"><span class="rm-val">184</span><span class="rm-key">LIKES</span></div>
+          <div class="rm"><span class="rm-val">20</span><span class="rm-key">SHARES</span></div>
+          <div class="rm"><span class="rm-val">18</span><span class="rm-key">GUARDADOS</span></div>
+        </div>
+      </div>
+    </div>
 
-/* NEEDS */
-#needs { background: var(--white); color: var(--black); }
-#needs h2 { font-size:clamp(36px,4vw,56px); font-weight:900; letter-spacing:-2px; margin-bottom:72px; opacity:0; transform:translateY(40px); }
-.needs-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:#e0e0e0; border:2px solid #e0e0e0; }
-.nb { background:var(--white); padding:60px 48px; opacity:0; transform:translateY(40px); }
-.nb.dark { background:var(--black); color:var(--white); }
-.nb-tag { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--mid); margin-bottom:28px; }
-.nb.dark .nb-tag { color:#333; }
-.nb h3 { font-size:28px; font-weight:800; letter-spacing:-1px; margin-bottom:28px; }
-.nl { list-style:none; }
-.nl li { padding:14px 0; border-bottom:1px solid #eee; font-size:14px; color:#555; display:flex; align-items:center; gap:14px; }
-.nb.dark .nl li { color:#777; border-bottom-color:#1a1a1a; }
-.nl li::before { content:'→'; color:var(--accent); font-size:13px; flex-shrink:0; }
+    <div class="reel-card">
+      <div class="reel-thumb reel-thumb--2">
+        <div class="reel-thumb-tag">Lifestyle · Journaling</div>
+        <div class="reel-thumb-icon">🌿</div>
+      </div>
+      <div class="reel-body">
+        <div class="reel-body-top">
+          <span class="reel-date">23 de febrero, 2026</span>
+          <a href="https://www.instagram.com/reel/DVHKIagCdfC/" target="_blank" class="reel-link">↗</a>
+        </div>
+        <h3 class="reel-title-card">Journaling Vlog #27</h3>
+        <div class="reel-views-row">
+          <span class="reel-big-num" data-target="10672">0</span>
+          <span class="reel-views-label">views</span>
+        </div>
+        <div class="reel-metrics">
+          <div class="rm"><span class="rm-val">296</span><span class="rm-key">LIKES</span></div>
+          <div class="rm"><span class="rm-val">9</span><span class="rm-key">SHARES</span></div>
+          <div class="rm"><span class="rm-val">16</span><span class="rm-key">GUARDADOS</span></div>
+        </div>
+      </div>
+    </div>
 
-/* GROWTH */
-#growth { background:#0d0d0d; }
-#growth h2 { font-size:clamp(36px,4vw,56px); font-weight:900; letter-spacing:-2px; margin-bottom:16px; opacity:0; transform:translateY(40px); }
-#growth .sub { font-size:14px; color:#555; margin-bottom:60px; opacity:0; }
-.chart-wrap { max-width:800px; margin:0 auto; opacity:0; transform:translateY(40px); }
+    <div class="reel-card">
+      <div class="reel-thumb reel-thumb--3">
+        <div class="reel-thumb-tag">Hyrox · Kifit Team</div>
+        <div class="reel-thumb-icon">🏁</div>
+      </div>
+      <div class="reel-body">
+        <div class="reel-body-top">
+          <span class="reel-date">4 de febrero, 2026</span>
+          <a href="https://www.instagram.com/reel/DUWfhAlCfLw/" target="_blank" class="reel-link">↗</a>
+        </div>
+        <h3 class="reel-title-card">Hyrox Team en @kifitcl</h3>
+        <div class="reel-views-row">
+          <span class="reel-big-num" data-target="20609">0</span>
+          <span class="reel-views-label">views</span>
+        </div>
+        <div class="reel-metrics">
+          <div class="rm"><span class="rm-val">245</span><span class="rm-key">LIKES</span></div>
+          <div class="rm"><span class="rm-val">11</span><span class="rm-key">SHARES</span></div>
+          <div class="rm"><span class="rm-val">12</span><span class="rm-key">GUARDADOS</span></div>
+        </div>
+      </div>
+    </div>
 
-/* WHY */
-#why { background:var(--accent); color:var(--black); }
-#why .sec-label { color:rgba(0,0,0,.3); }
-#why .sec-label::after { background:rgba(0,0,0,.15); }
-#why h2 { font-size:clamp(44px,5.5vw,80px); font-weight:900; letter-spacing:-3px; line-height:1.0; max-width:740px; margin-bottom:52px; opacity:0; transform:translateY(40px); }
-#why p { font-size:18px; line-height:1.9; max-width:640px; opacity:0; transform:translateY(30px); }
+  </div>
+</section>
+  /* REEL CARDS */
+.reels-row { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:#1a1a1a; border:2px solid #1a1a1a; }
+.reel-card { background:#0d0d0d; overflow:hidden; opacity:0; transform:translateY(60px); transition:transform .3s ease, border-color .3s ease; border:2px solid transparent; }
+.reel-card:hover { transform:translateY(-6px); border-color:var(--accent); }
+.reel-thumb { height:280px; position:relative; display:flex; align-items:center; justify-content:center; }
+.reel-thumb--1 { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a0a 40%, #2a2a00 100%); }
+.reel-thumb--2 { background: linear-gradient(135deg, #0a0a0a 0%, #0a1a0a 40%, #001a00 100%); }
+.reel-thumb--3 { background: linear-gradient(135deg, #0a0a0a 0%, #0a0a1a 40%, #000020 100%); }
+.reel-thumb-icon { font-size: 64px; opacity: .15; }
+.reel-thumb-tag { position:absolute; bottom:16px; left:16px; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.5); background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); padding:6px 14px; border-radius:100px; }
+.reel-body { padding:28px; }
+.reel-body-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.reel-date { font-size:10px; color:#333; letter-spacing:1px; }
+.reel-link { font-size:18px; color:#2a2a2a; text-decoration:none; transition:color .2s; }
+.reel-link:hover { color:var(--accent); }
+.reel-title-card { font-size:18px; font-weight:800; letter-spacing:-.5px; margin-bottom:24px; line-height:1.2; }
+.reel-views-row { display:flex; align-items:baseline; gap:8px; margin-bottom:24px; }
+.reel-big-num { font-size:52px; font-weight:900; color:var(--accent); letter-spacing:-2px; line-height:1; }
+.reel-views-label { font-size:14px; color:#333; font-weight:300; }
+.reel-metrics { display:flex; gap:0; border-top:1px solid #1a1a1a; padding-top:20px; }
+.rm { flex:1; }
+.rm-val { display:block; font-size:17px; font-weight:700; color:var(--white); margin-bottom:4px; }
+.rm-key { font-size:9px; color:#2a2a2a; letter-spacing:2px; text-transform:uppercase; }
 
-/* CLOSING */
-#closing { background:var(--black); min-height:100vh; display:flex; flex-direction:column; justify-content:center; }
-#closing h2 { font-size:clamp(56px,9vw,140px); font-weight:900; letter-spacing:-5px; line-height:.88; margin-bottom:60px; opacity:0; transform:translateY(60px); }
-#closing h2 em { font-style:normal; color:var(--accent); }
-.c-meta { display:flex; gap:48px; align-items:center; flex-wrap:wrap; opacity:0; }
-.c-meta a { font-size:13px; color:#444; text-decoration:none; letter-spacing:1px; transition:color .2s; }
-.c-meta a:hover { color:var(--white); }
-.c-meta .sep { color:#1a1a1a; }
-.foot { margin-top:80px; padding-top:36px; border-top:1px solid #111; display:flex; justify-content:space-between; opacity:0; }
-.foot span { font-size:10px; color:#222; letter-spacing:2px; text-transform:uppercase; }
-
-@media(max-width:900px){
-  nav{padding:18px 24px}
-  section{padding:120px 24px 80px}
-  #hero{padding:0 24px 60px}
-  .hero-meta{left:24px;right:24px}
-  .about-grid,.proj-grid,.needs-grid{grid-template-columns:1fr;gap:48px}
-  .cards{grid-template-columns:1fr}
-  .hero-bottom{flex-direction:column;align-items:flex-start;gap:32px}
-  .hero-stats{gap:32px}
-  .hs{text-align:left}
-  .phones-row{gap:20px}
-  .phone{width:180px}
-  .total-bar{flex-direction:column;align-items:flex-start;gap:12px}
-  .foot{flex-direction:column;gap:12px}
-}
+@media(max-width:900px){ .reels-row{grid-template-columns:1fr} }
 </style>
+  
 </head>
 <body>
 
@@ -443,9 +457,17 @@ gsap.to('.proj-title', { opacity:1, x:0, duration:1, scrollTrigger:{ trigger:'.p
 gsap.to('.proj-desc', { opacity:1, duration:0.9, delay:0.3, scrollTrigger:{ trigger:'.proj-desc', start:'top 80%' } });
 gsap.to('.proj-box', { opacity:1, x:0, duration:1, scrollTrigger:{ trigger:'.proj-box', start:'top 75%' } });
 
-// PHONES
-gsap.utils.toArray('.phone').forEach((p, i) => {
-  gsap.to(p, { opacity:1, y:0, duration:0.8, delay:i*0.15, scrollTrigger:{ trigger:'.phones-row', start:'top 75%' } });
+// REEL CARDS
+gsap.utils.toArray('.reel-card').forEach((c, i) => {
+  gsap.to(c, { opacity:1, y:0, duration:0.8, delay:i*0.15, scrollTrigger:{ trigger:'.reels-row', start:'top 75%' } });
+});
+gsap.utils.toArray('.reel-big-num').forEach(el => {
+  ScrollTrigger.create({ trigger:el, start:'top 85%', once:true, onEnter:() => {
+    const target = parseInt(el.dataset.target);
+    gsap.fromTo({v:0},{v:target},{v:target,duration:2,ease:'power2.out',snap:{v:1},
+      onUpdate:function(){ el.textContent = this.targets()[0].v.toLocaleString('es-CL'); }
+    });
+  }});
 });
 
 // CARDS
